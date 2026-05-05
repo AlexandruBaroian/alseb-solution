@@ -11,9 +11,9 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   scroll-behavior: smooth;
+  background: #0d47a1;
 }
 
-/* MENIU */
 nav {
   position: fixed;
   top: 0;
@@ -31,7 +31,6 @@ nav a {
   font-weight: bold;
 }
 
-/* HERO */
 .hero {
   min-height: 100vh;
   background:
@@ -43,34 +42,34 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 80px 20px 20px;
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 950px;
 }
 
 h1 { font-size: 42px; }
-h2 { font-size: 30px; }
+h2 { font-size: 32px; }
+h3 { font-size: 22px; }
 
 p {
   max-width: 850px;
   margin: 15px auto;
   font-size: 18px;
+  line-height: 1.6;
 }
 
-/* SECTIUNI */
 section {
   padding: 100px 20px;
   text-align: center;
   background: #0d47a1;
 }
 
-/* BUTOANE */
 .button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
+  margin: 12px 8px;
+  padding: 13px 24px;
   background: #1e88e5;
   color: white;
   text-decoration: none;
@@ -78,37 +77,64 @@ section {
   font-weight: bold;
 }
 
-/* LISTA */
-ul {
-  max-width: 750px;
-  margin: auto;
+.button.green {
+  background: #2e7d32;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.service-card {
+  background: #1565c0;
+  padding: 25px;
+  border-radius: 12px;
   text-align: left;
-  font-size: 18px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-li {
-  margin-bottom: 10px;
+.service-card p {
+  font-size: 16px;
+  margin: 10px 0 0;
 }
 
-/* WHATSAPP FIX */
 .whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25D366;
   color: white;
-  padding: 15px 20px;
+  padding: 15px 22px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
   z-index: 1000;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  nav a {
+    display: inline-block;
+    margin: 6px 8px;
+    font-size: 14px;
+  }
+
+  h1 { font-size: 30px; }
+  h2 { font-size: 26px; }
+
+  .hero {
+    padding-top: 120px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENIU -->
 <nav>
   <a href="#home">Acasă</a>
   <a href="#despre">Despre</a>
@@ -116,13 +142,9 @@ li {
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero">
   <div class="hero-content">
-
-    <h1>
-      Soluții reale pentru sănătate și securitate în muncă, prevenirea incendiilor și protecția mediului
-    </h1>
+    <h1>Soluții reale pentru sănătate și securitate în muncă, prevenirea incendiilor și protecția mediului</h1>
 
     <p>
       Sprijin companiile din construcții, industrie și domenii cu risc ridicat să respecte legislația și să implementeze sisteme eficiente, de la documentație până la aplicare în teren, având ca obiectiv principal protejarea oamenilor și desfășurarea activităților în condiții de siguranță.
@@ -130,10 +152,12 @@ li {
 
     <a class="button" href="#contact">Solicită o discuție</a>
 
+    <a class="button green" href="Prezentare_servicii_ALSEB_2026.pdf" target="_blank">
+      Descarcă prezentarea serviciilor
+    </a>
   </div>
 </section>
 
-<!-- DESPRE -->
 <section id="despre">
   <h2>Despre</h2>
 
@@ -164,28 +188,54 @@ li {
   </p>
 </section>
 
-<!-- SERVICII -->
 <section id="servicii">
   <h2>Servicii oferite</h2>
 
-  <ul>
-    <li>Sănătate și securitate în muncă (SSM)</li>
-    <li>Coordonare șantiere conform HG 300/2006</li>
-    <li>Prevenirea și stingerea incendiilor (PSI)</li>
-    <li>Protecția mediului și conformare legală</li>
-    <li>Implementare și certificare ISO 9001 / 14001 / 45001</li>
-    <li>Audituri interne și evaluări de risc</li>
-    <li>Documentație completă HSEQ</li>
-    <li>Autorizări: ANRE, ISU, CNCAN, ITM</li>
-    <li>Dezvoltarea și implementarea programelor SSM adaptate companiei, cu focus pe cultura de siguranță și prevenirea accidentelor</li>
-  </ul>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <h3>SSM – Sănătate și securitate în muncă</h3>
+      <p>Evaluarea riscurilor, planuri de prevenire și protecție, instruiri, documentație SSM și suport pentru conformare legală.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Coordonare șantiere HG 300/2006</h3>
+      <p>Planuri de securitate și sănătate, registru de coordonare, armonizarea planurilor subcontractorilor și suport operațional în teren.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>PSI / Situații de urgență / Protecție civilă</h3>
+      <p>Documentație PSI, planuri de evacuare, instrucțiuni, exerciții practice și permise de lucru pentru activități cu risc.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Protecția mediului</h3>
+      <p>Audituri de mediu, evidența deșeurilor, raportări către autorități și suport pentru autorizații de mediu.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>ISO 9001 / 14001 / 45001</h3>
+      <p>Implementare sisteme de management integrat, proceduri, audituri interne și suport pentru certificare sau supraveghere.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Audituri și conformare legală</h3>
+      <p>Verificarea nivelului de conformare, identificarea neconformităților și stabilirea unui plan clar de acțiuni corective.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Cultură de siguranță</h3>
+      <p>Dezvoltarea programelor SSM adaptate companiei, pentru creșterea gradului de conștientizare și implicarea angajaților în prevenirea accidentelor.</p>
+    </div>
+
+  </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
 
   <p>Telefon: +40 722 407 470</p>
+
   <p>
     Email:
     <a href="mailto:alexandru_baroian@hse-solution.com" style="color:white;">
@@ -196,10 +246,13 @@ li {
   <a class="button" href="https://wa.me/40722407470">
     Scrie-mi pe WhatsApp
   </a>
+
+  <a class="button green" href="Prezentare_servicii_ALSEB_2026.pdf" target="_blank">
+    Descarcă prezentarea serviciilor
+  </a>
 </section>
 
-<!-- WHATSAPP FIX -->
-<a class="whatsapp" href="https://wa.me/40722407470">
+<a class="whatsapp" href="https://wa.me/40722407470" target="_blank">
   WhatsApp
 </a>
 
