@@ -9,24 +9,33 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: white;
+  color: #1F2933;
+  background: #F4F7FA;
   scroll-behavior: smooth;
-  background: #0d47a1;
 }
 
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #0b3d91;
-  padding: 15px;
-  text-align: center;
+  background: #062B5F;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
   z-index: 1000;
+}
+
+nav img {
+  height: 45px;
+  background: white;
+  padding: 4px;
+  border-radius: 6px;
 }
 
 nav a {
   color: white;
-  margin: 0 20px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -34,7 +43,7 @@ nav a {
 .hero {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)),
+    linear-gradient(rgba(6, 43, 95, 0.82), rgba(6, 43, 95, 0.82)),
     url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
@@ -42,7 +51,16 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 20px 20px;
+  padding: 100px 20px 40px;
+  color: white;
+}
+
+.hero-logo {
+  max-width: 360px;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 30px;
 }
 
 .hero-content {
@@ -50,8 +68,8 @@ nav a {
 }
 
 h1 { font-size: 42px; }
-h2 { font-size: 32px; }
-h3 { font-size: 22px; }
+h2 { font-size: 32px; color: #062B5F; }
+h3 { font-size: 22px; color: #062B5F; }
 
 p {
   max-width: 850px;
@@ -61,16 +79,37 @@ p {
 }
 
 section {
-  padding: 100px 20px;
+  padding: 90px 20px;
   text-align: center;
-  background: #0d47a1;
+}
+
+#despre {
+  background: #FFFFFF;
+}
+
+.about-card {
+  max-width: 950px;
+  margin: 35px auto 0;
+  background: #F4F7FA;
+  padding: 35px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.about-card p {
+  color: #1F2933;
+}
+
+#servicii {
+  background: #EAF0F7;
 }
 
 .button {
   display: inline-block;
   margin: 12px 8px;
   padding: 13px 24px;
-  background: #1e88e5;
+  background: #0B3D91;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -78,7 +117,11 @@ section {
 }
 
 .button.green {
-  background: #2e7d32;
+  background: #2E7D32;
+}
+
+.button.red {
+  background: #C62828;
 }
 
 .services-grid {
@@ -90,16 +133,35 @@ section {
 }
 
 .service-card {
-  background: #1565c0;
+  background: white;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 14px;
   text-align: left;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  border-top: 5px solid #0B3D91;
+}
+
+.service-card.green {
+  border-top-color: #2E7D32;
+}
+
+.service-card.red {
+  border-top-color: #C62828;
 }
 
 .service-card p {
   font-size: 16px;
+  color: #1F2933;
   margin: 10px 0 0;
+}
+
+#contact {
+  background: #062B5F;
+  color: white;
+}
+
+#contact h2 {
+  color: white;
 }
 
 .whatsapp {
@@ -117,17 +179,25 @@ section {
 }
 
 @media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  nav img {
+    height: 35px;
+  }
+
   nav a {
-    display: inline-block;
-    margin: 6px 8px;
     font-size: 14px;
   }
 
   h1 { font-size: 30px; }
   h2 { font-size: 26px; }
 
-  .hero {
-    padding-top: 120px;
+  .hero-logo {
+    max-width: 280px;
   }
 }
 </style>
@@ -136,6 +206,7 @@ section {
 <body>
 
 <nav>
+  <img src="alseb-logo.png" alt="ALSEB Solution">
   <a href="#home">Acasă</a>
   <a href="#despre">Despre</a>
   <a href="#servicii">Servicii</a>
@@ -144,6 +215,9 @@ section {
 
 <section id="home" class="hero">
   <div class="hero-content">
+
+    <img src="alseb-logo.png" alt="ALSEB Solution" class="hero-logo">
+
     <h1>Soluții reale pentru sănătate și securitate în muncă, prevenirea incendiilor și protecția mediului</h1>
 
     <p>
@@ -161,31 +235,33 @@ section {
 <section id="despre">
   <h2>Despre</h2>
 
-  <p><strong>Expertiză tehnică și abordare orientată spre rezultate</strong></p>
+  <div class="about-card">
+    <p><strong>Expertiză tehnică și abordare orientată spre rezultate</strong></p>
 
-  <p>
-    Sunt inginer și specialist în sănătate și securitate în muncă, prevenirea incendiilor și protecția mediului, cu experiență în proiecte din domenii precum Oil & Gas, construcții, industrie și producție.
-  </p>
+    <p>
+      Sunt inginer și specialist în sănătate și securitate în muncă, prevenirea incendiilor și protecția mediului, cu experiență în proiecte din domenii precum Oil & Gas, construcții, industrie și producție.
+    </p>
 
-  <p>
-    Formarea mea tehnică îmi permite să înțeleg în detaliu procesele operaționale și riscurile reale din teren, oferind soluții aplicabile, nu doar teoretice.
-  </p>
+    <p>
+      Formarea mea tehnică îmi permite să înțeleg în detaliu procesele operaționale și riscurile reale din teren, oferind soluții aplicabile, nu doar teoretice.
+    </p>
 
-  <p>
-    Dețin certificare internațională în domeniul Health & Safety (NEBOSH), care îmi oferă o perspectivă aliniată la standarde internaționale și acces la bune practici utilizate la nivel global.
-  </p>
+    <p>
+      Dețin certificare internațională în domeniul Health & Safety (NEBOSH), care îmi oferă o perspectivă aliniată la standarde internaționale și acces la bune practici utilizate la nivel global.
+    </p>
 
-  <p>
-    Am colaborat cu companii și proiecte complexe, fiind implicat atât în implementarea sistemelor de management, cât și în coordonarea activităților din teren.
-  </p>
+    <p>
+      Am colaborat cu companii și proiecte complexe, fiind implicat atât în implementarea sistemelor de management, cât și în coordonarea activităților din teren.
+    </p>
 
-  <p>
-    Experiența acumulată și proiectele implementate au contribuit la dezvoltarea unei culturi a siguranței în cadrul organizațiilor, prin reducerea riscurilor și diminuarea numărului de accidente de muncă.
-  </p>
+    <p>
+      Experiența acumulată și proiectele implementate au contribuit la dezvoltarea unei culturi a siguranței în cadrul organizațiilor, prin reducerea riscurilor și diminuarea numărului de accidente de muncă.
+    </p>
 
-  <p>
-    Abordarea mea este orientată către rezultate reale: nu doar documentație, ci soluții care reduc riscurile, cresc nivelul de conștientizare și contribuie la dezvoltarea unei culturi solide de siguranță.
-  </p>
+    <p>
+      Abordarea mea este orientată către rezultate reale: nu doar documentație, ci soluții care reduc riscurile, cresc nivelul de conștientizare și contribuie la dezvoltarea unei culturi solide de siguranță.
+    </p>
+  </div>
 </section>
 
 <section id="servicii">
@@ -203,12 +279,12 @@ section {
       <p>Planuri de securitate și sănătate, registru de coordonare, armonizarea planurilor subcontractorilor și suport operațional în teren.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card red">
       <h3>PSI / Situații de urgență / Protecție civilă</h3>
       <p>Documentație PSI, planuri de evacuare, instrucțiuni, exerciții practice și permise de lucru pentru activități cu risc.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card green">
       <h3>Protecția mediului</h3>
       <p>Audituri de mediu, evidența deșeurilor, raportări către autorități și suport pentru autorizații de mediu.</p>
     </div>
@@ -223,7 +299,7 @@ section {
       <p>Verificarea nivelului de conformare, identificarea neconformităților și stabilirea unui plan clar de acțiuni corective.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card green">
       <h3>Cultură de siguranță</h3>
       <p>Dezvoltarea programelor SSM adaptate companiei, pentru creșterea gradului de conștientizare și implicarea angajaților în prevenirea accidentelor.</p>
     </div>
@@ -243,11 +319,11 @@ section {
     </a>
   </p>
 
-  <a class="button" href="https://wa.me/40722407470">
+  <a class="button green" href="https://wa.me/40722407470">
     Scrie-mi pe WhatsApp
   </a>
 
-  <a class="button green" href="Prezentare_servicii_ALSEB_2026.pdf" target="_blank">
+  <a class="button" href="Prezentare_servicii_ALSEB_2026.pdf" target="_blank">
     Descarcă prezentarea serviciilor
   </a>
 </section>
