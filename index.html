@@ -1,107 +1,158 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALSEB Solution</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-      line-height: 1.6;
-    }
-    .logo {
-      max-width: 180px;
-      margin-bottom: 30px;
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-    }
-    .profile-photo {
-      width: 170px;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin: 30px auto 10px;
-      display: block;
-    }
-    h1 { font-size: 40px; }
-    h2 { margin-top: 50px; font-size: 30px; }
-    p { font-size: 18px; max-width: 850px; margin: 15px auto; }
-    ul { max-width: 800px; margin: 20px auto; text-align: left; font-size: 18px; }
-    li { margin-bottom: 10px; }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #1e88e5;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    section { margin-top: 60px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALSEB Solution</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d47a1;
+  color: white;
+}
+
+/* MENIU */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0b3d91;
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTIUNI */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+h1 { font-size: 42px; }
+h2 { font-size: 30px; }
+
+p {
+  max-width: 800px;
+  margin: 15px auto;
+  font-size: 18px;
+}
+
+/* BUTOANE */
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #1e88e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* POZA */
+.profile {
+  width: 160px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 4px solid white;
+}
+
+/* LISTA SERVICII */
+ul {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* WHATSAPP FIX */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
 </head>
 
 <body>
 
-  <img src="LOGO ALSEB solution.png" alt="ALSEB Solution Logo" class="logo">
+<!-- MENIU -->
+<nav>
+  <a href="#home">Acasă</a>
+  <a href="#despre">Despre</a>
+  <a href="#servicii">Servicii</a>
+  <a href="#contact">Contact</a>
+</nav>
 
+<!-- HERO -->
+<section id="home">
   <h1>Consultanță HSE pentru industrii cu risc ridicat</h1>
 
   <p>
-    Sprijin companiile din Oil & Gas, construcții și industrie să respecte legislația și să implementeze sisteme eficiente HSEQ – de la documentație ISO până la coordonare operațională pe teren.
+    Sprijin companiile din Oil & Gas, construcții și industrie să respecte legislația și să implementeze sisteme HSEQ eficiente.
   </p>
 
-  <a href="https://wa.me/40722407470">Solicită o ofertă</a>
+  <a class="button" href="#contact">Solicită o ofertă</a>
+</section>
 
-  <section>
-    <img src="DSCF_IMG_3107-CR3_DxO_DeepPRIME.jpg" alt="Alexandru Baroian" class="profile-photo">
+<!-- DESPRE -->
+<section id="despre">
+  <h2>Despre mine</h2>
 
-    <h2>Despre mine</h2>
+  <img src="DSCF_IMG_3107-CR3_DxO_DeepPRIME.jpg" class="profile">
 
-    <p>
-      Sunt specialist HSEQ certificat NEBOSH, cu experiență în companii internaționale precum VINCI Energies, Rompetrol și SIAD.
-    </p>
+  <p>
+    Sunt specialist HSEQ certificat NEBOSH, cu experiență în companii internaționale precum VINCI Energies, Rompetrol și SIAD.
+  </p>
 
-    <p>
-      Am coordonat sisteme de management HSEQ și proiecte complexe în domenii precum Oil & Gas, construcții industriale, infrastructură și producție.
-    </p>
+  <p>
+    Am coordonat sisteme HSEQ și proiecte complexe în Oil & Gas, construcții industriale și infrastructură.
+  </p>
+</section>
 
-    <p>
-      Lucrez direct cu managementul companiilor pentru implementarea de soluții reale, nu doar documentație, având ca obiectiv reducerea riscurilor și atingerea standardului „Zero Accidente”.
-    </p>
-  </section>
+<!-- SERVICII -->
+<section id="servicii">
+  <h2>Servicii oferite</h2>
 
-  <section>
-    <h2>Servicii</h2>
+  <ul>
+    <li>Implementare și certificare ISO 9001 / 14001 / 45001</li>
+    <li>Audituri interne și conformitate legală</li>
+    <li>Coordonare SSM șantiere (HG 300/2006)</li>
+    <li>Documentație HSEQ completă</li>
+    <li>Autorizări: ANRE, ISU, CNCAN, ITM</li>
+    <li>Evaluare riscuri și planuri de prevenire</li>
+  </ul>
+</section>
 
-    <ul>
-      <li>Implementare și certificare ISO 9001 / 14001 / 45001</li>
-      <li>Audituri interne și evaluare conformitate legală</li>
-      <li>Coordonare SSM șantiere conform HG 300/2006</li>
-      <li>Elaborare documentație HSEQ completă</li>
-      <li>Autorizări: ANRE, ISU, CNCAN, ITM</li>
-      <li>Evaluare riscuri și planuri de prevenire</li>
-      <li>Training și dezvoltare cultură de siguranță</li>
-    </ul>
-  </section>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
 
-  <section>
-    <h2>Ai nevoie de suport HSE?</h2>
+  <p>Telefon: +40 722 407 470</p>
+  <p>Email: alex.baroian@yahoo.com</p>
 
-    <p>
-      Te pot ajuta să implementezi rapid un sistem conform și eficient, adaptat companiei tale.
-    </p>
+  <a class="button" href="https://wa.me/40722407470">Scrie-mi pe WhatsApp</a>
+</section>
 
-    <a href="https://wa.me/40722407470">Contactează-mă pe WhatsApp</a>
-  </section>
+<!-- BUTON FIX -->
+<a class="whatsapp" href="https://wa.me/40722407470">WhatsApp</a>
 
 </body>
 </html>
