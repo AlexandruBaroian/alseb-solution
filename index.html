@@ -133,7 +133,7 @@ section {
   background: #EAF0F7;
 }
 
-.services-grid {
+.services-grid, .industries-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
@@ -141,27 +141,37 @@ section {
   margin: 40px auto 0;
 }
 
-.service-card {
+.service-card, .industry-card {
   background: white;
   padding: 25px;
   border-radius: 14px;
   text-align: left;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   border-top: 5px solid #0B3D91;
+  min-height: 230px;
 }
 
-.service-card.green {
+.service-card.green, .industry-card.green {
   border-top-color: #2E7D32;
 }
 
-.service-card.red {
+.service-card.red, .industry-card.red {
   border-top-color: #C62828;
 }
 
-.service-card p {
+.service-card p, .industry-card p {
   font-size: 16px;
   color: #1F2933;
   margin: 10px 0 0;
+}
+
+.icon {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+#industrii {
+  background: #FFFFFF;
 }
 
 #contact {
@@ -233,6 +243,7 @@ section {
   <a href="#home">Acasă</a>
   <a href="#despre">Experiență</a>
   <a href="#servicii">Servicii</a>
+  <a href="#industrii">Industrii</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -288,51 +299,93 @@ section {
 </section>
 
 <section id="servicii">
-  <h2>Cum te pot ajuta concret</h2>
+  <h2>Servicii profesionale</h2>
 
   <div class="services-grid">
 
     <div class="service-card">
+      <div class="icon">🦺</div>
       <h3>SSM – Sănătate și securitate în muncă</h3>
-      <p>Te ajut să identifici riscurile reale din activitatea companiei și să implementezi măsuri eficiente pentru prevenirea accidentelor și respectarea cerințelor legale.</p>
+      <p>Te ajut să identifici riscurile reale din activitatea companiei și să implementezi măsuri eficiente pentru prevenirea accidentelor, documentație SSM, evaluarea riscurilor, instruiri și conformare legală.</p>
     </div>
 
     <div class="service-card">
+      <div class="icon">🏗️</div>
       <h3>Șantiere temporare și mobile – HG 300/2006</h3>
       <p>Asigur coordonare SSM pentru șantiere temporare și mobile, verificarea documentației subcontractorilor, planuri de securitate și sănătate, inspecții în teren, safety walks și managementul riscurilor operaționale.</p>
     </div>
 
     <div class="service-card red">
-      <h3>PSI / Situații de urgență</h3>
-      <p>Te ajut să previi riscurile de incendiu și să implementezi proceduri clare pentru intervenție rapidă, evacuare și protejarea oamenilor.</p>
+      <div class="icon">🔥</div>
+      <h3>Prevenirea și stingerea incendiilor (PSI)</h3>
+      <p>Ofer suport pentru documentație PSI, planuri de evacuare, instrucțiuni, instruiri, exerciții practice și pregătirea companiei pentru controale sau situații de urgență.</p>
     </div>
 
     <div class="service-card green">
+      <div class="icon">🌍</div>
       <h3>Protecția mediului</h3>
-      <p>Te sprijin în respectarea obligațiilor de mediu, gestionarea deșeurilor, raportările către autorități și obținerea autorizațiilor necesare.</p>
+      <p>Sprijin companiile în respectarea obligațiilor de mediu, gestionarea deșeurilor, raportări către autorități, audituri de mediu și suport pentru autorizații sau cerințe specifice.</p>
     </div>
 
     <div class="service-card">
+      <div class="icon">📋</div>
       <h3>Implementare ISO 9001 / 14001 / 45001</h3>
-      <p>Construiesc sisteme de management simple și eficiente, adaptate activității companiei, nu doar documentație teoretică pentru audit.</p>
+      <p>Construiesc sisteme de management eficiente și aplicabile, adaptate activității companiei, cu proceduri, audituri interne și suport pentru certificare sau menținerea certificărilor existente.</p>
     </div>
 
     <div class="service-card">
+      <div class="icon">✅</div>
       <h3>Audituri și conformare legală</h3>
-      <p>Identific rapid neconformitățile și îți ofer un plan clar de acțiune pentru a evita sancțiunile, blocajele operaționale și riscurile inutile.</p>
+      <p>Verific nivelul de conformare, identific neconformitățile și ofer un plan clar de acțiuni corective pentru reducerea riscurilor, evitarea sancțiunilor și pregătirea pentru controale.</p>
     </div>
 
     <div class="service-card green">
+      <div class="icon">🎓</div>
       <h3>Traininguri și cultură de siguranță</h3>
-      <p>Dezvolt programe SSM adaptate companiei tale, pentru creșterea gradului de conștientizare și implicarea angajaților în prevenirea accidentelor.</p>
-      <p>Dezvolt programe de instruire și conștientizare adaptate companiei: toolbox talks, safety awareness, leadership HSE, campanii interne și programe pentru creșterea implicării angajaților în prevenirea accidentelor.</p>
+      <p>Dezvolt programe de instruire și conștientizare adaptate companiei: toolbox talks, safety awareness, leadership HSE, campanii interne și programe pentru implicarea angajaților în prevenirea accidentelor.</p>
     </div>
 
   </div>
 
   <a class="button" href="#contact">
-    Solicită o discuție pentru compania ta
+    Solicită evaluarea activității companiei
   </a>
+</section>
+
+<section id="industrii">
+  <h2>Industrii și experiență operațională</h2>
+
+  <p>
+    Experiența acumulată în proiecte tehnice și operaționale îmi permite să ofer soluții adaptate companiilor care activează în domenii cu risc ridicat.
+  </p>
+
+  <div class="industries-grid">
+
+    <div class="industry-card">
+      <div class="icon">⚙️</div>
+      <h3>Industrie și producție</h3>
+      <p>Suport pentru conformare SSM, PSI și mediu în activități industriale, linii de producție, mentenanță și procese operaționale.</p>
+    </div>
+
+    <div class="industry-card">
+      <div class="icon">🏗️</div>
+      <h3>Construcții și infrastructură</h3>
+      <p>Coordonare SSM pentru șantiere temporare și mobile, management subcontractori, verificări în teren și controlul riscurilor operaționale.</p>
+    </div>
+
+    <div class="industry-card">
+      <div class="icon">🛢️</div>
+      <h3>Oil & Gas și energie</h3>
+      <p>Experiență în domenii cu cerințe ridicate de siguranță, control operațional, permise de lucru, proceduri și disciplină HSE.</p>
+    </div>
+
+    <div class="industry-card green">
+      <div class="icon">🌱</div>
+      <h3>Companii cu cerințe de mediu</h3>
+      <p>Suport pentru obligații de mediu, gestiunea deșeurilor, raportări, audituri și integrarea cerințelor de mediu în activitatea companiei.</p>
+    </div>
+
+  </div>
 </section>
 
 <section id="contact">
