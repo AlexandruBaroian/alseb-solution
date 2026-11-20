@@ -3,15 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALSEB Solution</title>
+<title>ALSEB Solution – Consultanță SSM, PSI și protecția mediului</title>
+<meta name="description" content="Consultanță SSM, PSI și protecția mediului pentru construcții, industrie și Oil &amp; Gas: evaluarea riscurilor, coordonare șantiere HG 300/2006, audituri, ISO 9001/14001/45001 și instruiri.">
+<link rel="icon" type="image/png" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ALSEB Solution – Consultanță SSM, PSI și protecția mediului">
+<meta property="og:description" content="Soluții reale pentru sănătate și securitate în muncă, prevenirea incendiilor și protecția mediului.">
+<meta property="og:url" content="https://hse-solution.com/">
+<meta property="og:image" content="https://hse-solution.com/logo.png">
 
 <style>
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #1F2933;
   background: #F4F7FA;
-  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 nav {
@@ -138,7 +156,7 @@ section {
 
 .services-grid, .industries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   gap: 25px;
   max-width: 1400px;
   margin: 50px auto 0;
@@ -172,7 +190,6 @@ section {
 .icon {
   font-size: 48px;
   margin-bottom: 18px;
-}
 }
 
 #industrii {
@@ -237,6 +254,23 @@ section {
     text-align: left;
     padding: 25px;
   }
+
+  section {
+    padding: 90px 18px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .service-card, .industry-card {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .hero {
+    padding-top: 150px;
+  }
 }
 </style>
 </head>
@@ -265,7 +299,7 @@ section {
 
     <a class="button" href="#contact">Solicită o discuție</a>
 
-    <a class="button green" href="prezentare-alseb.pdf" target="_blank">
+    <a class="button green" href="prezentare-alseb.pdf" target="_blank" rel="noopener">
       Descarcă prezentarea serviciilor
     </a>
   </div>
@@ -396,7 +430,7 @@ section {
 <section id="contact">
   <h2>Contact</h2>
 
-  <p>Telefon: +40 722 407 470</p>
+  <p>Telefon: <a href="tel:+40722407470">+40 722 407 470</a></p>
 
   <p>
     Email:
@@ -406,20 +440,20 @@ section {
   </p>
 <p>
   LinkedIn:
-  <a href="https://www.linkedin.com/in/numele-tau/" target="_blank" style="text-decoration:none; color:white; font-size:18px;">
+  <a href="https://www.linkedin.com/in/numele-tau/" target="_blank" rel="noopener" style="text-decoration:none; color:white; font-size:18px;">
     🔗 LinkedIn
   </a>
 </p>
-  <a class="button green" href="https://wa.me/40722407470">
+  <a class="button green" href="https://wa.me/40722407470" target="_blank" rel="noopener">
     Scrie-mi pe WhatsApp
   </a>
 
-  <a class="button" href="prezentare-alseb.pdf" target="_blank">
+  <a class="button" href="prezentare-alseb.pdf" target="_blank" rel="noopener">
     Descarcă prezentarea serviciilor
   </a>
 </section>
 
-<a class="whatsapp" href="https://wa.me/40722407470" target="_blank">
+<a class="whatsapp" href="https://wa.me/40722407470" target="_blank" rel="noopener">
   WhatsApp
 </a>
 
